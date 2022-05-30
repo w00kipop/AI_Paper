@@ -5,7 +5,7 @@ Maxpooling, GPU 기법 등이 적용된 AlexNet이 2012 ILSVRC 대회에서 우�
 널리 알리게 됩니다. 2년뒤 Inception block을 적용한 CNN 모델인 GoogLeNet이 2014 ILSVRC 대회  
 에서 우승을 차지하게 됩니다.
 
-<img src="./img/ilsvrc.png" width="500px">  
+<img src="./img/googlenet/ilsvrc.png" width="500px">  
 
 ### GoogLeNet?
 ---
@@ -31,7 +31,7 @@ NIN은 높은 상관관계에 있는 neuron들을 군집화 시키고 마지막 
 수행 할 때, 수행 후 feature map을 얻게 되는데, multilayer perceptron 네트워크를 convolution시 추가로  
 적용하여 feature map을 만든다.  
 
-<img src="./img/featuremap.png" width="500px">  
+<img src="./img/googlenet/featuremap.png" width="500px">  
 
 이를 통해 fc layer와 conv layer를 dense한 구조에서 sparse한 구조로 바꿀 수 있다고 말한다. GoogLeNet에  
 서는 NIN 구현을 위해 Inception module을 적용한다.  
@@ -53,7 +53,7 @@ Inception module에서 feature map을 효율적으로 얻기 위해 1x1, 3x3, 5x
 의 height, width가 같아야 하므로 pooling 연산에서 padding을 추가해준다. pooling을 적용하는 이유는 conv-net  
 work에서 pooling-layer의 성능이 입증되었기 때문이다.  
 
-<img src="./img/inceptionmodule.png" width="500px">  
+<img src="./img/googlenet/inceptionmodule.png" width="500px">  
 
 위의 사진에서 Inception module을 보면 1x1 convolutions이 보이는데, 이것이 inception module의 핵심이다.  
 1x1 convolution의 목적은 dimension reduction을 실행하여 필요 연산량을 감소 시키는 것이다. 3x3와 5x5의  
@@ -78,12 +78,12 @@ uction을 통해 다음 계층의 input 값을 조절할 수 있기 때문이다
 ---
 다음은 Inception module을 통해 다양한 feature(특징)을 추출하고 parameter 연산량을 개선한 모델이다.  
 
-<img src="./img/googlenetarchitecture.png" width="500px">  
+<img src="./img/googlenet/googlenetarchitecture.png" width="500px">  
 
 또한 아래의 사진은 전체 구조에 대한 상세한 구성이다. 각 convolution에는 relu가 적용되었으며, optimizer는   
 0.9 momentum을 지닌 SGD를 사용합니다. 매 8 Epoch마다 4% 학습률을 낮춰서 진행합니다.  
 
-<img src="./img/googlenetrescue.png" width="500px">  
+<img src="./img/googlenet/googlenetrescue.png" width="500px">  
 
 모델의 깊이가 굉장히 깊은 것을 알 수 있고, 이는 곧 gradient vanshing 문제가 발생할 수 있기 때문에 중간에  
 효과적인 기울기 전달을 위해 auxiliary classifier를 중간 layer에 추가했다.  
@@ -95,7 +95,7 @@ auxiliary classifier의 등장배경은 이러합니다. 상대적으로 얇은 
 
 ### Result
 ---
-<img src="./img/googlenetresult.png" width="500px">  
+<img src="./img/googlenet/googlenetresult.png" width="500px">  
 
 위에서 볼 수 있듯 2등이였던 VGGNet에 비해 거의 1% Error율을 줄인것을 볼 수 있으며 ILSVRC 2012 ~ 2014   
 이래로 가장 낮은 Error율을 나타낸다는 것을 알 수 있다.

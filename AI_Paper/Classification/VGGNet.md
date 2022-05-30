@@ -19,11 +19,11 @@ VGGNet은 기존에 존재하던 AlexNet(8-layers)모델보다 깊이가 2배 �
 VGGNet이 깊은 네트워크를 학습할 수 있었던 이유는 바로 모든 Conv-layer에서 3x3 필터를 사용  
 했기 때문이다.
 
-<img src="./img/vggnetvsalexnet.png" width="500px">
+<img src="./img/vggnet/vggnetvsalexnet.png" width="500px">
 
 ### VGGNet Architecture
 ---
-<img src="./img/vggnetarchitecture.png" width="500px">
+<img src="./img/vggnet/vggnetarchitecture.png" width="500px">
 
 VGGNet의 Architecture의 구성
 
@@ -35,7 +35,7 @@ VGGNet의 Architecture의 구성
 
 ### Experiment result
 ---
-<img src="./img/vggnetexp.png" width="500px">
+<img src="./img/vggnet/vggnetexp.png" width="500px">
 
 input_size는 224x224 크기의 컬러 영상을 사용하며, 한개 혹은 여러개의 max-pooling 층이 반복되는  
 구조이고, 마지막으로 FC layer가 구성되어 있다. 기존의 7x7 filter를 사용하지 않고 3x3 filter를  

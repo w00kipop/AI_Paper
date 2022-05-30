@@ -46,7 +46,7 @@ overlapping pooling이라고 칭합니다. 해당 모델에서는 s=2, z=3을 �
 현재는 총 8개 Layer로 구성된 구조이며, 출력층에는 활성화 함수로 softmax를 사용하여 1000개의  
 클래스를 구현하였습니다. 
 
-<img src='./img/alexnetarchitecture.png' width="500px">
+<img src='./img/alexnet/alexnetarchitecture.png' width="500px">
 
 ### Data Augmentation
 ---
@@ -54,7 +54,7 @@ overlapping pooling이라고 칭합니다. 해당 모델에서는 s=2, z=3을 �
 서로 다른 사진 5장을 추출합니다. 이후 수평반사로 1개의 image에서 서로다른 10장의 image를  
 추출한 후 softmax 출력층에서 10개 image의 예측값 평균을 구하는 방식입니다.
 
-<img src="./img/dataagumentation.png" width="500px">
+<img src="./img/alexnet/dataagumentation.png" width="500px">
 
 ### Dropout
 ---
@@ -63,11 +63,11 @@ dropout 과정을 거치지 않습니다. dropout을 거친 부분은 다음 뉴
 이를 통해 overfitting을 줄이기 때문입니다. dropout 확률을 너무 적게 준다면 학습에 왜곡  
 이 생길 수 있기에 적당한 값을 주어야 합니다.
 
-<img src="./img/dropout.png" width="500px">
+<img src="./img/alexnet/dropout.png" width="500px">
 
 ### Result
 ---
-<img src="./img/alexnetresult.png" width="500px">
+<img src="./img/alexnet/alexnetresult.png" width="500px">
 
 결과는 위와 같이 CNN이 다른 모델에 비해 효율적임을 알 수 있고, 앙상블 모델을 이용한 성능이  
 1개의 CNN 모델만 사용하는 것 보다 좋은 결과를 가진다는 것을 알 수 있다. fine-tune이  
