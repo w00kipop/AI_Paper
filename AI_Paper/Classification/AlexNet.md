@@ -18,7 +18,7 @@ ImageNet의 dataset은 1500만개 이상의 고해상도의 레이블된 data이
 기존은 활성화 함수보다 목표 error-rate에 도달하는 속도가 빠르며 경사 하강 알고리  
 즘에서 유리하고 overfitting 감소에 장점을 가집니다.  
 
-<img src="./img/reluvstanh.png" width="400px">
+<img src="./img/alexnet/reluvstanh.png" width="400px">
 
 ### Multiple GPUs
 ---
@@ -26,7 +26,7 @@ GPU메모리의 크기는 네트워크 성능을 제한합니다. 그렇기에 �
 GPU를 병렬 연결하여 사용하였고, 각 GPU마다 Kernel의 절반을 배치하였으며 아래와  
 같이 사용된다. 이를 통해 error-rate 감소의 성과를 이루었다.
 
-<img src="./img/multiplegpu.png" width="400px">
+<img src="./img/alexnet/multiplegpu.png" width="400px">
 
 ### Local Response Normalization
 ---
